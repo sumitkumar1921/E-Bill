@@ -1,0 +1,120 @@
+.dashboard-sidebar {
+  background: rgba(2, 6, 23, 0.95);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sidebar-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fb923c, #f97316);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: white;
+}
+
+.sidebar-brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+}
+
+.sidebar-phone {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sidebar-create-invoice {
+  border: none;
+  background: linear-gradient(135deg, #fb923c, #f97316);
+  color: white;
+  padding: 0.8rem 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.sidebar-create-invoice:hover {
+  opacity: 0.95;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
+  padding: 0.25rem 0.4rem;
+}
+
+.sidebar-item {
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.sidebar-item.active,
+.sidebar-item:hover {
+  background: rgba(251, 146, 60, 0.18);
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  display: grid;
+  gap: 0.6rem;
+  padding-top: 1rem;
+}
+
+.sidebar-settings,
+.sidebar-logout {
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sidebar-settings {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar-logout {
+  background: #fb923c;
+  color: white;
+}

@@ -1,0 +1,448 @@
+:root {
+  color-scheme: dark;
+}
+
+.pricing-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(147, 197, 253, 0.16), transparent 24%),
+    #183058;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.site-header {
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 2rem;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.85);
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.7rem;
+  background: rgba(15, 23, 42, 0.98);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 16px 35px rgba(2, 6, 23, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-group {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.nav-dropdown-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fb923c;
+  padding: 0 0.75rem;
+}
+
+.nav-dropdown-menu a {
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(251, 146, 60, 0.16);
+  color: white;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button-primary,
+.button-outline,
+.button-ghost {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: #fb923c;
+  color: white;
+  border-color: transparent;
+}
+
+.button-outline {
+  background: transparent;
+  color: white;
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+.button-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border-color: transparent;
+}
+
+.pricing-hero {
+  padding: 2rem 2rem 0;
+}
+
+.pricing-copy {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-copy .eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #c7d2fe;
+}
+
+.pricing-copy h1 {
+  margin: 0;
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.pricing-intro {
+  margin: 1.5rem auto 2rem;
+  max-width: 560px;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.pricing-toggle {
+  display: inline-flex;
+  background: #3b82f6;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.toggle-button {
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  color: #c7d2fe;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background: white;
+  color: #1e40af;
+}
+
+.plans-section {
+  padding: 2rem;
+}
+
+.plans-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  color: #0f172a;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card.featured {
+  border: 2px solid #6366f1;
+}
+
+.plan-tag {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #fb923c;
+  color: white;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.plan-header {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.plan-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fb923c;
+}
+
+.plan-label.platinum {
+  color: #4f46e5;
+}
+
+.plan-label.enterprise {
+  color: #10b981;
+}
+
+.plan-header p {
+  margin: 0;
+  color: #475569;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.plan-price small {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.plan-subtitle {
+  margin: 0.5rem 0 1.5rem;
+  color: #64748b;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.plan-features li,
+.plan-extra-features li {
+  color: #334155;
+  line-height: 1.6;
+}
+
+.plan-extra-features {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.plan-note {
+  margin: 1rem 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.plan-include {
+  margin: 1.5rem 0 0.95rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.plan-include-standard {
+  color: #ea580c;
+}
+
+.plan-include-diamond {
+  color: #4338ca;
+}
+
+.plan-include-platinum {
+  color: #059669;
+}
+
+.plan-actions {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.plan-card button {
+  width: 100%;
+}
+
+.plan-divider {
+  height: 1px;
+  background: #cbd5e1;
+  opacity: 1;
+  margin: 1.75rem 0;
+  width: 100%;
+  display: block;
+}
+
+.site-footer {
+  padding: 3rem 2rem 2rem;
+  background: #020617;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.footer-column {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer-column h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #f8fafc;
+}
+
+.footer-column a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-contact .contact-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.footer-contact .icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.label {
+  margin: 0 0 0.25rem;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+
+.value {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.follow-title,
+.office-name {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-links span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+}
+
+@media (max-width: 1200px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .site-header,
+  .pricing-hero,
+  .plans-section,
+  .site-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pricing-copy h1 {
+    font-size: 2.4rem;
+  }
+
+  .plans-grid {
+    gap: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

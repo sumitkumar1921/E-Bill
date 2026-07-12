@@ -1,0 +1,120 @@
+.site-header {
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 2rem;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.85);
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a,
+.nav-button {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-link-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.nav-arrow {
+  font-size: 1rem;
+  line-height: 1;
+  color: #cbd5e1;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.7rem;
+  background: rgba(15, 23, 42, 0.98);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 16px 35px rgba(2, 6, 23, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-group {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.nav-dropdown-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fb923c;
+  padding: 0 0.75rem;
+}
+
+.nav-dropdown-menu a {
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(251, 146, 60, 0.16);
+  color: white;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-primary {
+  background: #fb923c;
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
